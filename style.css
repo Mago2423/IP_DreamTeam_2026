@@ -271,6 +271,70 @@ footer{
   border-color: #F1C94D;
 }
 
+/* ===== Main Hub (Website page) helpers ===== */
+
+.hub-stack{
+  display: grid;
+  gap: 12px;
+}
+
+/* Big “route cards” (Auction/Market/Collection) */
+.hub-card{
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(12,12,18,0.55);
+  padding: 16px 16px;
+  box-shadow: var(--shadow);
+}
+
+.hub-card:hover{
+  background: rgba(18,18,26,0.70);
+  transform: translateY(-1px);
+  transition: transform .15s ease, background .15s ease;
+}
+
+/* Smaller utility tiles (Points section) */
+.hub-mini{
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: rgba(12,12,18,0.50);
+  padding: 14px 14px;
+}
+
+.hub-mini:hover{
+  background: rgba(18,18,26,0.70);
+}
+
+/* Title style */
+.hub-title{
+  font-family: var(--title-font);
+  letter-spacing: 0.4px;
+  color: var(--text);
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Mobile tweaks */
 @media (max-width: 576px){
