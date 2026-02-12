@@ -314,22 +314,35 @@ footer{
   color: var(--text);
 }
  
+.carousel-indicators {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  border-color: #F1C94D;
+  bottom: -55px;   /* push down */
+  padding: 2px;
+  background: rgba(18,18,26,1);
+}
 
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;                     /* remove Bootstrap 15% width */
+  top: 50%;                        /* vertical center */
+  transform: translateY(-50%);
+  opacity: 1;
+}
 
+.carousel-control-prev {
+  left: -80px;                     /* push left */
+}
 
+.carousel-control-next {
+  right: -80px;                    /* push right */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(1.2);
+}
 
 
 
@@ -347,4 +360,11 @@ footer{
 }
   .quest-claim{
   font-size: 15px;
+  }
+
+  .carousel-control-prev {
+    left: 8px;
+  }
+  .carousel-control-next {
+    right: 8px;
   }
