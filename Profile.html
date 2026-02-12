@@ -42,71 +42,97 @@
     </div>
   </nav>
 
-  <main>
-    <hr class="divider my-3">
-    <header class="container hero-pad py-4">
-      <div class="text-center mb-4">
-        <h2 class="text-uppercase mb-2">Profile</h2>
-        <hr class="divider my-3">
-        <div class="fw-bold"><h1>Main</h1></div>
-      </div>
-    </header>
-    <div class="p-4 panel">
-      <div class="row g-4 -items-stretch">
+<main class="container my-5">
 
-        <div class="container">
-            <div class="p-4 panel">
-                <div class="container-fluid">
-                    <div class="d-flex flex-wrap">
-                        <div class="avatar">🙂</div>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <div class="container flex-fill">
-                            <div class="d-flex flex-wrap">
-                                <div class="fw-bold container-sm flex-fill">
-                                    Thanatos
-                                </div>
-                                <div class="small mt-2 container-sm flex-fill">
-                                    Sleepy
-                                </div>
-                            </div>
-                            <div class="flex-fill">
-                                <img src="picture" alt="notification" width="50" height="50">
-                            </div>
-                        </div>
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">LVL 15</div>
-                                <div class="fw-bold">VIP</div>
-                            </div>
+  <!-- PAGE HEADER -->
+  <header class="text-center mb-5">
+    <h2 class="text-uppercase">Profile</h2>
+    <hr class="divider mx-auto">
+    <div class="fw-bold fs-4">Main</div>
+  </header>
 
-                            <div class="xp mt-2">
-                                <div class="xp-progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="row g-4">
 
-        <div class="col-12 col-lg-7">
-          <div class="p-4 panel">
-            <div class="d-grid gap-3">
-              <a class="btn btn-lg menu-btn text-start" href="MainHub.html">
-                <img src="picture" alt="Auction" width="500" height="300">
-                <div class="small">Auction</div>
-              </a>
-            </div>
+    <!-- LEFT: PROFILE PANEL -->
+    <div class="col-lg-4">
+      <div class="panel p-4 h-100">
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <div class="avatar">🙂</div>
+
+          <div>
+            <div class="fw-bold fs-4">Thanatos</div>
+            <div class="small">Sleepy</div>
+          </div>
+          <div class="d-flex align-items-right gap-3 mb-4">
+            <img src="picture" alt="notification" width="50" height="50">
           </div>
         </div>
 
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="fw-bold">LVL 15</div>
+          <div class="fw-bold">VIP</div>
+        </div>
+
+        <div class="xp mt-2">
+          <div class="xp-progress" style="width:35%"></div>
+        </div>
+
+      </div>
     </div>
-  </main>
+
+    <!-- RIGHT: MENU + ITEMS -->
+    <div class="col-lg-8">
+
+      <!-- QUICK MENU -->
+      <div class="panel p-4 mb-4">
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <a href="#" class="btn menu-btn w-100">
+              <span>Gallery</span>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn menu-btn w-100">
+              <span>Bookmarks</span>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn menu-btn w-100">
+              <span>Community</span>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" class="btn menu-btn w-100">
+              <span>Collection</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+</main>
+
+
 
   <footer class="container pb-4">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <div class="small">© Celestial Forge</div>
+          <!-- DISPLAYED ITEMS -->
+    <div class="panel p-4">
+        <h5 class="mb-3">Displayed Items</h5>
+
+        <div class="d-flex gap-3 flex-wrap">
+          <img src="item1.jpg" class="img-fluid rounded">
+          <img src="item2.jpg" class="img-fluid rounded">
+          <img src="item3.jpg" class="img-fluid rounded">
+          <img src="item4.jpg" class="img-fluid rounded">
+        </div>
+      </div>
+
+    </div>
+  </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
