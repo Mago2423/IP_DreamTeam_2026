@@ -23,73 +23,65 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const plusBtn = document.getElementById("plusBtn");
-const minusBtn = document.getElementById("minusBtn");
-const bidBtn = document.getElementById("bidBtn");
-const priceDisplay = document.getElementById("priceDisplay");
+document.addEventListener("DOMContentLoaded", () => {
+  const plusBtn = document.getElementById("plusBtn");
+  const minusBtn = document.getElementById("minusBtn");
+  const bidBtn = document.getElementById("bidBtn");
+  const priceDisplay = document.getElementById("priceDisplay");
+  const currentBidText = document.getElementById("currentBidText");
 
-const step = 10000; // price increment
+  const step = 10000; // increment/decrement
 
-// 1️⃣ Load base price: either from API, or fallback to localStorage, or default
-let basePrice = Number(localStorage.getItem("price")) || 150000;
+  // 1️⃣ Load the current highest bid from API on page load
+  let basePrice = 150000; // fallback default
+  let tempPrice = basePrice;
 
-// 2️⃣ If coming back from Bid page, check latest confirmed bid
-const latestBidAmount = Number(localStorage.getItem("latestBidAmount"));
-const latestBidUser = localStorage.getItem("latestBidUser");
+  fetch("https://your-api.com/auction/current") // ✅ replace with your actual API URL
+    .then(res => res.json())
+    .then(data => {
+      basePrice = data.highestBid;
+      tempPrice = basePrice;
+      updateDisplay();
+      currentBidText.textContent = `${data.highestBid} Gold`;
+    })
+    .catch(() => {
+      // fallback if API fails
+      updateDisplay();
+      currentBidText.textContent = `${tempPrice} Gold`;
+    });
 
-if (latestBidAmount && latestBidAmount > basePrice) {
-  basePrice = latestBidAmount; // update base price
-  localStorage.setItem("price", basePrice); // store as new base
-}
+  // 2️⃣ Check if there is a latest confirmed bid in localStorage (from Bid page)
+  const latestBidAmount = Number(localStorage.getItem("latestBidAmount"));
+  const latestBidUser = localStorage.getItem("latestBidUser");
 
-// 3️⃣ tempPrice starts at basePrice
-let tempPrice = basePrice;
-
-// 4️⃣ show immediately
-priceDisplay.value = `G${tempPrice}`;
-
-// Handle + button
-plusBtn.addEventListener("click", () => {
-  tempPrice += step;
-  updateDisplay();
-});
-
-// Handle − button
-minusBtn.addEventListener("click", () => {
-  if (tempPrice > basePrice) {
-    tempPrice -= step;
-    updateDisplay();
-  }
-});
-
-// Update input display
-function updateDisplay() {
-  priceDisplay.value = `G${tempPrice}`;
-}
-
-// Bid button: save pending bid and navigate
-bidBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  localStorage.setItem("pendingBid", tempPrice); // save temp bid
-  window.location.href = bidBtn.href;            // go to Bid page
-});
-
-// Display latest confirmed bid and user
-const currentBidText = document.getElementById("currentBidText");
-if (latestBidAmount && latestBidUser) {
-  currentBidText.textContent = `${latestBidAmount} Gold by ${latestBidUser}`;
-} else {
-  currentBidText.textContent = `${basePrice} Gold`;
-}
-
-// fetch from API to get real highest bid
-
-fetch("https://cbricgiqjcfkreigcuxk.supabase.co")
-  .then(res => res.json())
-  .then(data => {
-    basePrice = data.highestBid;
+  if (latestBidAmount && latestBidAmount > basePrice) {
+    basePrice = latestBidAmount;
     tempPrice = basePrice;
     updateDisplay();
-    currentBidText.textContent = `${data.highestBid} Gold`;
+    currentBidText.textContent = `${latestBidAmount} Gold by ${latestBidUser}`;
+  }
+
+  // 3️⃣ Button handlers
+  plusBtn.addEventListener("click", () => {
+    tempPrice += step;
+    updateDisplay();
   });
 
+  minusBtn.addEventListener("click", () => {
+    if (tempPrice > basePrice) {
+      tempPrice -= step;
+      updateDisplay();
+    }
+  });
+
+  function updateDisplay() {
+    priceDisplay.value = `G${tempPrice}`;
+  }
+
+  // 4️⃣ Bid button: save pending bid and go to Bid page
+  bidBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.setItem("pendingBid", tempPrice);
+    window.location.href = bidBtn.href;
+  });
+});

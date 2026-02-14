@@ -101,37 +101,28 @@
           </div>
         </div>
 
-        <div class="panel p-4 mb-4">
-          <h4>Current Bid: 150,000 Gold</h4>
-        </div>
-
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="d-flex align-items-center gap-2">
-
-            <button id="minusBtn" class="btn btn-danger">−</button>
-
-            <input
-              type="text"
-              id="priceDisplay"
-              class="form-control text-center price-display panel text-white"
-              readonly
-            >
-
-            <button id="plusBtn" class="btn btn-success">+</button>
-
-          </div>
-        </div>
-
-        <a id="bidBtn" href="../Auction/Bid.html" class="btn btn-outline-light">Bid</a>
-
-
         <!--API-->
-      <div class="panel p-3 mt-4 text-center">
-        <h4>
-          Current Highest Bid:
+      <div class="panel p-4 mb-4">
+        <h4>Current Highest Bid: 
           <span id="currentBidText">Loading...</span>
         </h4>
       </div>
+
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <div class="d-flex align-items-center gap-2">
+          <button id="minusBtn" class="btn btn-danger">−</button>
+          <input type="text" id="priceDisplay" class="form-control text-center price-display panel text-white" readonly>
+          <button id="plusBtn" class="btn btn-success">+</button>
+        </div>
+      </div>
+
+      <a id="bidBtn" href="../Auction/Bid.html" class="btn btn-outline-light mb-4">Bid</a>
+
+      <div class="panel p-3 mt-4 text-center">
+        <h5>Bid History</h5>
+        <ul id="bidHistoryList" class="list-group w-50 mx-auto mt-2"></ul>
+      </div>
+
     </main>
     <footer>
       <div class=" justify-content-center text-center">
