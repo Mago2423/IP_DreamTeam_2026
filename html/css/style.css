@@ -373,7 +373,12 @@ footer{
   margin: 0 10px; /* horizontal spacing */
 }
 
-
+.stars {
+  color: gold;
+  font-size: 1rem;
+  margin-left: 6px;
+  letter-spacing: 1px;
+}
 
 
 /* Mobile tweaks */
