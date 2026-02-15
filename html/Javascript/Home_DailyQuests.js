@@ -12,3 +12,4 @@ popupModal.addEventListener('show.bs.modal', event => {
   popupModal.querySelector('.modal-body').textContent =
     content || 'No reward available.';
 });
+
