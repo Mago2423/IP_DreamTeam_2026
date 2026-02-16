@@ -1,40 +1,61 @@
 <!doctype html>
 <html lang="en">
+
+<!-- ===== HEAD ===== -->
+<!-- Document head section containing metadata and stylesheet references for page configuration -->
 <head>
+  <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
   <meta charset="utf-8">
-  <title>Celestial Forge · Home</title>
+  <!-- Page title: Text displayed in browser tab and used by search engines -->
+  <title>Celestial Forge · Daily Quests</title>
+  <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts import: Cinzel font family for elegant typography and headings -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Normalize CSS stylesheet: Ensures consistent default styling across different web browsers -->
   <link rel="stylesheet" href="../css/normalize.css">
+  <!-- Custom project stylesheet: Contains all project-specific styling and design elements -->
   <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
 
+    <!-- ===== NAVIGATION ===== -->
+    <!-- Bootstrap navigation bar with dark theme, expanded layout on large screens, and responsive menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
     <div class="container">
 
+      <!-- Logo and branding text displayed in bold on left side of navbar -->
       <a class="navbar-brand fw-bold" href="../../index.html">
         CELESTIAL FORGE
       </a>
       
+      <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
       <div id="nav" class="collapse navbar-collapse">
+        <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
         <div class="ms-auto d-flex align-items-center">
 
+          <!-- Navigation link to Main Hub page -->
           <a class="btn" href="../Main/MainHub.html">
               Main Hub
           </a>
 
+          <!-- Navigation link to Home page marked as currently active section -->
           <a class="btn nav-active" href="../../index.html">
             Home
           </a>
 
+          <!-- Navigation link to Profile page -->
           <a class="btn" href="../Main/Profile.html">
               Profile
           </a>
@@ -42,61 +63,101 @@
       </div>
     </div>
   </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <!-- Main content area with container and margins for proper spacing -->
     <main class="container my-4">
 
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- Header section with centered text alignment and decorative dividers -->
     <header class="text-center mb-4">
+        <!-- Decorative horizontal divider line above title -->
         <hr class="divider">
+        <!-- Page heading displaying daily quests section title -->
         <h2 class="text-uppercase">Daily Quests</h2>
+        <!-- Countdown timer showing time until quests reset -->
         <div class="fw-bold display-6">Resets in: 12:54:12</div>
+        <!-- Decorative horizontal divider line below title -->
         <hr class="divider">
     </header>
 
+    <!-- ===== QUESTS LAYOUT ===== -->
+    <!-- Two-column responsive layout with equal spacing and stretched height for alignment -->
     <div class="row g-4 align-items-stretch">
 
-        <!-- LEFT: Daily Quest Board -->
+        <!-- ===== LEFT PANEL: DAILY QUEST BOARD ===== -->
+        <!-- Left column: Takes full width on mobile, 6 columns on large screens -->
         <section class="col-12 col-lg-6">
+        <!-- Panel container with padding and full height to match right panel -->
         <div class="panel p-4 h-100">
 
+            <!-- Section heading for daily quests -->
             <h5 class="fw-bold mb-3">Daily Quest Board</h5>
+            <!-- Visual separator divider line -->
             <hr class="divider">
 
+            <!-- Container for all quest cards in this section -->
             <div class="quest-wrap mt-4">
 
+            <!-- Individual quest card: Buy 2 Weapons (Complete - 100% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing quest info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Quest info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Quest task name -->
                     <div class="quest-name">Buy 2 Weapons</div>
+                    <!-- Quest rewards and progress displayed as subtext -->
                     <div class="quest-sub">Rewards: 100 points · 0/2</div>
+                    <!-- Progress bar for quest completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 100% completion -->
                     <div class="quest-bar-fill" style="width:100%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with quest reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 100 points">Claim</button>
                 </div>
             </div>
 
+            <!-- Individual quest card: Bid for an item (Not started - 0% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing quest info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Quest info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Quest task name -->
                     <div class="quest-name">Bid for an item</div>
+                    <!-- Quest rewards and progress displayed as subtext -->
                     <div class="quest-sub">Rewards: 150 points · 0/1</div>
+                    <!-- Progress bar for quest completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 0% completion -->
                     <div class="quest-bar-fill" style="width:0%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with quest reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 150 points">Claim</button>
                 </div>
             </div>
 
+            <!-- Individual quest card: Like 5 posts (In progress - 20% completion) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing quest info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Quest info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Quest task name -->
                     <div class="quest-name">Like 5 posts</div>
+                    <!-- Quest rewards and progress displayed as subtext -->
                     <div class="quest-sub">Rewards: 200 points · 1/5</div>
+                    <!-- Progress bar for quest completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 20% completion -->
                     <div class="quest-bar-fill" style="width:20%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with quest reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 200 points">Claim</button>
                 </div>
             </div>
@@ -105,64 +166,102 @@
         </div>
         </section>
 
-        <!-- RIGHT: Daily Challenges Board -->
+        <!-- ===== RIGHT PANEL: DAILY CHALLENGES BOARD ===== -->
+        <!-- Right column: Takes full width on mobile, 6 columns on large screens -->
         <section class="col-12 col-lg-6">
+        <!-- Panel container with padding and full height to match left panel -->
         <div class="panel p-4 h-100">
 
+            <!-- Section heading for daily challenges -->
             <h5 class="fw-bold mb-3">Challenges Board</h5>
+            <!-- Subtext indicating these are one-time challenges -->
             <div class="quest-sub">One Time Challenges</div>
+            <!-- Visual separator divider line -->
             <hr class="divider">
 
+            <!-- Container for all challenge cards in this section -->
             <div class="quest-wrap mt-4">
 
+            <!-- Individual challenge card: Spend 100,000,000 Gold (25% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing challenge info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Challenge info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Challenge task name -->
                     <div class="quest-name">Like spend 100,000,000</div>
+                    <!-- Challenge rewards and progress with badge reward -->
                     <div class="quest-sub">Rewards: 150,000 points + Big Spender Badge · 25,000,000/100,000,000</div>
+                    <!-- Progress bar for challenge completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 25% completion -->
                     <div class="quest-bar-fill" style="width:25%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with challenge reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 200 points">Claim</button>
                 </div>
             </div>
 
+            <!-- Individual challenge card: Own 100 Items (4% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing challenge info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Challenge info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Challenge task name -->
                     <div class="quest-name">Own 100 Items</div>
+                    <!-- Challenge rewards and progress with title reward -->
                     <div class="quest-sub">Rewards: 100020P + Hoarder Title · 4/100</div>
+                    <!-- Progress bar for challenge completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 4% completion -->
                     <div class="quest-bar-fill" style="width:4%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with challenge reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 200 points">Claim</button>
                 </div>
             </div>
 
+            <!-- Individual challenge card: Auction 100 Weapons (4% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing challenge info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Challenge info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Challenge task name -->
                     <div class="quest-name">Auction 100 Weapons</div>
+                    <!-- Challenge rewards and progress with title reward -->
                     <div class="quest-sub">Rewards: 10000P + Man of Many · 4/100</div>
+                    <!-- Progress bar for challenge completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 4% completion -->
                     <div class="quest-bar-fill" style="width:4%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with challenge reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 200 points">Claim</button>
                 </div>
             </div>
 
+            <!-- Individual challenge card: Own 100 Stickers (4% progress) -->
             <div class="quest-card">
+                <!-- Flexbox layout placing challenge info on left and claim button on right -->
                 <div class="d-flex justify-content-between align-items-center gap-3">
+                <!-- Challenge info section that expands to fill available space -->
                 <div class="flex-grow-1">
+                    <!-- Challenge task name -->
                     <div class="quest-name">Own 100 Stickers</div>
+                    <!-- Challenge rewards and progress with badge reward -->
                     <div class="quest-sub">Rewards: 100020P + Expressive Badge · 4/100</div>
+                    <!-- Progress bar for challenge completion -->
                     <div class="quest-bar mt-2">
+                    <!-- Filled portion of progress bar showing 4% completion -->
                     <div class="quest-bar-fill" style="width:4%"></div>
                     </div>
                 </div>
+                    <!-- Claim button with challenge reward data for modal popup -->
                     <button class="btn btn-primary claim-btn" data-title="Congrats!" data-content="You have earned 200 points">Claim</button>
                 </div>
             </div>
@@ -172,22 +271,34 @@
         </section>
 
     </div>
+
     </main>
 
-
+    <!-- ===== FOOTER ===== -->
+    <!-- Footer section with streak information and padding -->
     <footer class="container pb-4 ">
+    <!-- Flexbox layout for footer content with responsive direction and alignment -->
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <!-- User streak counter showing consecutive days -->
       <div class="fw-bold">1 Day streak!</div>
     </footer>
 
+    <!-- ===== MODAL POPUP ===== -->
+    <!-- Bootstrap modal dialog for displaying quest completion rewards and confirmations -->
     <div class="modal fade" id="popupModal" tabindex="-1">
+        <!-- Modal dialog container centered on screen -->
         <div class="modal-dialog modal-dialog-centered">
+        <!-- Modal content with panel styling, padding, and white text color -->
         <div class="modal-content panel p-4 text-white">
+            <!-- Modal header with title and close button -->
             <div class="modal-header">
+            <!-- Modal title section that gets populated dynamically by JavaScript -->
             <h5 class="modal-title"></h5>
+            <!-- Close button for dismissing the modal -->
             <button class="btn-close btn-close-white"
                     data-bs-dismiss="modal"></button>
             </div>
+            <!-- Modal body section that gets populated dynamically by JavaScript -->
             <div class="modal-body">
 
             </div>
@@ -195,7 +306,10 @@
         </div>
     </div>
 
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Bootstrap JavaScript library: Enables interactive components like modals, carousels, dropdowns -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom script for handling daily quests interactions and modal popups -->
     <script src="../Javascript/Home_DailyQuests.js"></script>
 </body>
 </html> 

@@ -1,38 +1,58 @@
 <!doctype html>
 <html lang="en">
+
+<!-- ===== HEAD ===== -->
+<!-- Document head section containing metadata and stylesheet references for page configuration -->
 <head>
+    <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
     <meta charset="utf-8">
-    <title>Celestial Forge · Home</title>
+    <!-- Page title: Text displayed in browser tab and used by search engines -->
+    <title>Celestial Forge · Daily Shop</title>
+    <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts import: Cinzel font family for elegant typography and headings -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Custom project stylesheet: Contains all project-specific styling and design elements -->
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
+    <!-- ===== NAVIGATION ===== -->
+    <!-- Bootstrap navigation bar with dark theme, expanded layout on large screens, and responsive menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
     <div class="container">
 
+      <!-- Logo and branding text displayed in bold on left side of navbar -->
       <a class="navbar-brand fw-bold" href="../../index.html">
         CELESTIAL FORGE
       </a>
       
+      <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
       <div id="nav" class="collapse navbar-collapse">
+        <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
         <div class="ms-auto d-flex align-items-center">
 
+          <!-- Navigation link to Main Hub page -->
           <a class="btn" href="../Main/MainHub.html">
               Main Hub
           </a>
 
+          <!-- Navigation link to Home page marked as currently active section -->
           <a class="btn nav-active" href="../../index.html">
             Home
           </a>
 
+          <!-- Navigation link to Market/Shop page -->
           <a class="btn" href="../Main/Profile.html">
               Market
           </a>
@@ -40,21 +60,34 @@
       </div>
     </div>
   </nav>
+    <!-- ===== MAIN CONTENT ===== -->
+    <!-- Main content area with hero padding and vertical margins -->
     <main class="hero-pad my-4">
 
+        <!-- ===== HEADER SECTION ===== -->
+        <!-- Header section with centered text alignment and decorative dividers -->
         <header class="text-center mb-5">
+            <!-- Decorative horizontal divider line above title -->
             <hr class="divider">
+            <!-- Page heading displaying Daily Shop section title -->
             <h2 class="text-uppercase">Daily Shop</h2>
+            <!-- Countdown timer showing time until shop items reset -->
             <div class="fw-bold display-6">Resets in: 12:54:12</div>
+            <!-- Decorative horizontal divider line below title -->
             <hr class="divider">
         </header>
 
+        <!-- ===== FEATURED ITEMS SECTION ===== -->
+        <!-- Main featured items container with padding and relative positioning for floating label -->
         <div class="panel p-4 position-relative">
+            <!-- Floating "Featured" label centered at the top with dark background -->
             <div class="position-absolute top-0 start-50 translate-middle panel px-4 py-2 bg-dark text-white z-3">
                 Featured
             </div>
 
+            <!-- Container for featured items with top margin spacing -->
             <div class="container mt-5">
+                <!-- Grid row that spaces items evenly with vertical gaps -->
                 <div class="row gy-4 justify-content-around">
                     <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
                         <div class="item-card panel p-3">
