@@ -1,61 +1,69 @@
-// Initialize contact form when DOM is loaded
+// ===== CONTACT FORM INITIALIZATION =====
+// Initialize contact form when the DOM has fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // This script handles the contact form submission and validation
-  
+  // Get references to form elements for validation and submission handling
   const contactForm = document.getElementById("contactForm");
   const emailInput = document.getElementById("email");
   const subjectInput = document.getElementById("subject");
   const messageInput = document.getElementById("message");
 
-  // Form submission handler - validates and processes user input
+  // ===== FORM SUBMISSION HANDLER =====
+  // Listen for form submission and validate user input before processing
   contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Stop the form from reloading the page
+    e.preventDefault(); // Prevent default form submission and page reload
 
-    // Get the form values and trim whitespace
+    // ===== GET AND VALIDATE INPUT =====
+    // Retrieve form values and remove leading/trailing whitespace
     const email = emailInput.value.trim();
     const subject = subjectInput.value.trim();
     const message = messageInput.value.trim();
 
-    // Validate that all fields are filled out
+    // Check that all required fields have been filled out
     if (!email || !subject || !message) {
       alert("Please fill in all fields");
       return;
     }
 
-    // Validate email format using regex pattern
+    // ===== EMAIL FORMAT VALIDATION =====
+    // Verify email follows standard format using regex pattern matching
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert("Please enter a valid email address");
       return;
     }
 
-    // If you have a backend service to send emails, use this:
-    // Otherwise, you can save to localStorage, Firebase, or another service
-    
+    // ===== SAVE MESSAGE =====
+    // Store form data in browser's localStorage for future retrieval
     try {
-      // Option 1: Save to localStorage (for demonstration)
+      // Retrieve existing messages from localStorage or create empty array
       const messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+      
+      // Add new message object with timestamp
       messages.push({
         email: email,
         subject: subject,
         message: message,
         timestamp: new Date().toLocaleString()
       });
+      
+      // Save updated messages array back to localStorage
       localStorage.setItem("contactMessages", JSON.stringify(messages));
 
-      // Show success message
+      // Show success confirmation to user
       alert("Message sent successfully! Thank you for contacting us.");
       
-      // Clear the form fields
+      // Clear all form fields after successful submission
       contactForm.reset();
 
-      // Optional: Redirect to home page after a delay
+      // Optional: Uncomment to redirect to home page after 2 seconds
       // setTimeout(() => {
       //   window.location.href = "../../index.html";
       // }, 2000);
 
     } catch (error) {
+      // Log error to console for debugging purposes
       console.error("Error sending message:", error);
+      // Display error message to user
       alert("There was an error sending your message. Please try again.");
     }
   });
