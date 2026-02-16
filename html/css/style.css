@@ -408,6 +408,7 @@ footer{
 }
 
 
+
 /* Mobile tweaks */
 @media (max-width: 576px){
   #nav .btn{
@@ -420,8 +421,9 @@ footer{
   }
 
   .carousel-control-prev {
-    left: 8px;
+    left: -20px;       /* push left */
   }
+
   .carousel-control-next {
-    right: 8px;
+    right: -20px;        /* push right */
   }
