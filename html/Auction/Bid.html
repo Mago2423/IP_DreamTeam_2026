@@ -5,19 +5,33 @@
     <title>Celestial Forge · Bid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS: Provides responsive grid, forms, buttons, utilities, navbars -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Cinzel for fantasy/medieval themed titles -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Normalize CSS: resets default browser styles for consistency -->
     <link rel="stylesheet" href="../css/normalize.css">
+    
+    <!-- Custom CSS for Celestial Forge theme -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- Navbar using Bootstrap classes -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
+            <!-- Brand / Logo with bold text -->
             <a class="navbar-brand fw-bold" href="../../index.html">CELESTIAL FORGE</a>
+            
+            <!-- Toggler button for collapsing navbar on small screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span> <!-- Built-in hamburger icon -->
             </button>
+            
+            <!-- Collapsible navbar content -->
             <div id="nav" class="collapse navbar-collapse">
+                <!-- ms-auto pushes items to the right; d-flex + align-items-center aligns items vertically -->
                 <div class="ms-auto d-flex align-items-center">
                     <a class="btn" href="../Main/MainHub.html">Main Hub</a>
                     <a class="btn nav-active" href="../../index.html">Home</a>
@@ -27,18 +41,21 @@
         </div>
     </nav>
 
+    <!-- Main content container with margin y-axis -->
     <main class="container my-5">
         <header>
-            <hr class="divider">
-            <h2 class="text-center mb-4">Confirm Your Bid</h2>
+            <hr class="divider"> <!-- Horizontal divider -->
+            <h2 class="text-center mb-4">Confirm Your Bid</h2> <!-- Centered heading -->
             <hr class="divider">
         </header>
 
+        <!-- Bid confirmation form -->
         <form>
-            <!-- User Info -->
+            <!-- User Info section -->
             <div class="mb-3 row">
-                <label for="usernameInput" class="col-sm-3 col-form-label">Username:</label>
+                <label for="usernameInput" class="col-sm-3 col-form-label">Username:</label> <!-- Label spans 3 columns on small+ screens -->
                 <div class="col-sm-9">
+                    <!-- Text input with Bootstrap form-control, custom panel class, text-white -->
                     <input type="text" id="usernameInput" class="form-control panel text-white" placeholder="Enter Username" required>
                 </div>
             </div>
@@ -59,12 +76,12 @@
 
             <hr class="divider">
 
-            <!-- Item Info -->
+            <!-- Item Info section -->
             <div class="mb-3 row align-items-center">
                 <label class="col-sm-3 col-form-label">Item:</label>
                 <div class="col-sm-9">
                     <div class="panel p-2 text-center">
-                        <h4 class="mb-0">Cosmic Wand</h4>
+                        <h4 class="mb-0">Cosmic Wand</h4> <!-- Display item name -->
                     </div>
                 </div>
             </div>
@@ -72,7 +89,7 @@
             <div class="mb-3 row align-items-center">
                 <label class="col-sm-3 col-form-label">Bidding Price:</label>
                 <div class="col-sm-9 panel p-2 text-center">
-                    <span id="pendingBidDisplay">0</span> G
+                    <span id="pendingBidDisplay">0</span> G <!-- Display pending bid -->
                 </div>
             </div>
 
@@ -81,9 +98,11 @@
             <!-- Action Buttons -->
             <div class="row">
                 <div class="col-sm-6 mb-2">
+                    <!-- Cancel button using Bootstrap btn, secondary, large, full-width -->
                     <a class="btn btn-secondary btn-lg w-100" href="../Auction/Auction.html">Cancel</a>
                 </div>
                 <div class="col-sm-6 mb-2">
+                    <!-- Confirm Bid button, submits form -->
                     <button id="confirmBidBtn" data-table="bids" type="submit" class="btn btn-success btn-lg w-100">Confirm Bid</button>
                 </div>
             </div>
@@ -91,27 +110,28 @@
 
         <hr class="divider">
 
-        <!-- Bid History -->
+        <!-- Bid History section -->
         <div class="panel p-3 mt-5 text-center">
             <h5>Bid History</h5>
             <hr class="divider">
+            <!-- Bootstrap list-group for displaying past bids, centered and width 50% -->
             <ul id="bidHistoryList" class="list-group w-50 mx-auto mt-2 panel"></ul>
         </div>
     </main>
 
-
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS bundle: collapse, modal, dropdown, etc. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Supabase client -->
+    <!-- Supabase JS SDK for database interactions -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co"; // replace with your Supabase URL
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc"; // replace with your anon key
+        // Initialize Supabase client
+        const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co"; // your Supabase URL
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc"; 
         const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     </script>
 
-    <!-- Bid JS -->
+    <!-- Custom JS for bid functionality -->
     <script src="../Javascript/Bid.js"></script>
 </body>
 </html>
