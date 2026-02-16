@@ -380,6 +380,33 @@ footer{
   letter-spacing: 1px;
 }
 
+.item-image {
+  width: 100%;
+  height: 180px;              /* consistency control */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.gold-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* forces same size everywhere */
+  border: 3px solid gold;
+  border-radius: 16px;
+  overflow: hidden;        /* REQUIRED to clip image */
+  background: #000;
+}
+
+.gold-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* ACTUAL cropping */
+  display: block;
+  border-radius: inherit;
+}
+
 
 /* Mobile tweaks */
 @media (max-width: 576px){
