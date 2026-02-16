@@ -51,32 +51,51 @@
 
     <!-- Main part  -->
 
+    <!-- hero-pad: Custom padding | my-4: Margin vertical -->
     <main class="hero-pad my-4">
 
+        <!-- text-center: Center text alignment | mb-5: Bottom margin -->
         <header class="text-center mb-5">
+            <!-- text-uppercase: Make text uppercase | divider: Custom horizontal divider styling -->
             <hr class="divider">
             <h2 class="text-uppercase">Market</h2>
             <hr class="divider">
         </header>
 
+        <!-- ===== FEATURED ITEMS SECTION ===== -->
+        <!-- panel: Custom panel with gradient background and border | p-4: Padding | position-relative: Allow absolute positioning for floating label -->
         <div class="panel p-4 position-relative">
+            <!-- position-absolute: Removed from document flow | top-0: Top position | start-50: 50% from left | translate-middle: Center the element | panel: Panel styling | px-4: Horizontal padding | py-2: Vertical padding | bg-dark: Dark background | text-white: White text | z-3: High z-index to overlay content -->
             <div class="position-absolute top-0 start-50 translate-middle panel px-4 py-2 bg-dark text-white z-3">
                 Featured
             </div>
 
+            <!-- container: Center content and add max-width | mt-5: Top margin -->
             <div class="container mt-5">
+                <!-- row: Grid row | gy-4: Vertical gap between items | justify-content-around: Distribute items with space around -->
                 <div class="row gy-4 justify-content-around">
-                    <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                    <!-- col-12/col-sm-6/col-lg-6: Full width on mobile, half on small+, half on large+ -->
+                    <div class="col-12 col-sm-6 col-lg-6">
+                        <!-- item-card: Custom card container from CSS | panel: Styled panel | p-3: Padding -->
                         <div class="item-card panel p-3">
+                            <!-- row: Grid row | align-items-center: Vertically center items -->
                             <div class="row align-items-center">
+                            <!-- col-12/col-lg-7: Full width on mobile, 58% (7/12) on large | text-center: Center text -->
                             <div class="col-12 col-lg-7 text-center">
+                                <!-- fs-4/fs-md-3: Responsive font sizes (Bootstrap utility classes) -->
                                 <h2 class="fs-4 fs-md-3">Basic Wand</h2>
+                                <!-- gold-frame: Custom gold border frame from CSS -->
                                 <div class="gold-frame">
+                                <!-- img-fluid: Responsive image that scales with container -->
                                 <img src="../pictures/giantaxe-removebg-preview.png" class="img-fluid">
                                 </div>
                             </div>
+                            <!-- col-12/col-lg-5: Full width on mobile, 42% (5/12) on large -->
                             <div class="col-12 col-lg-5">
+                                <!-- fs-6/fs-md-5: Responsive font sizes | mt-3: Top margin -->
                                 <p class="fs-6 fs-md-5 mt-3">80,000G</p>
+                                <!-- btn: Button styling | btn-primary: Bootstrap primary blue button | w-100: Full width button -->
+                                <!-- data-bs-* attributes: Bootstrap data attributes for modal triggering -->
                                 <button class="btn btn-primary w-100"
                                     data-bs-toggle="modal"
                                     data-bs-target="#dynamicModal"
@@ -95,17 +114,27 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                    <!-- col-12/col-sm-6/col-lg-6: Full width on mobile, half on small+, half on large+ -->
+                    <div class="col-12 col-sm-6 col-lg-6">
+                        <!-- item-card: Custom card container from CSS | panel: Styled panel | p-3: Padding -->
                         <div class="item-card panel p-3">
+                            <!-- row: Grid row | align-items-center: Vertically center items -->
                             <div class="row align-items-center">
+                            <!-- col-12/col-lg-7: Full width on mobile, 58% on large | text-center: Center text -->
                             <div class="col-12 col-lg-7 text-center">
+                                <!-- fs-4/fs-md-3: Responsive font sizes -->
                                 <h2 class="fs-4 fs-md-3">Auora Blade</h2>
+                                <!-- gold-frame: Custom gold border frame from CSS -->
                                 <div class="gold-frame">
+                                <!-- img-fluid: Responsive image -->
                                 <img src="../pictures/auorablade.png" class="img-fluid">
                                 </div>
                             </div>
+                            <!-- col-12/col-lg-5: Full width on mobile, 42% on large -->
                             <div class="col-12 col-lg-5">
+                                <!-- fs-6: Font size | mt-3: Top margin -->
                                 <p class="fs-6 mt-3">100,000G</p>
+                                <!-- btn: Button | btn-primary: Blue primary button | w-100: Full width -->
                                 <button class="btn btn-primary w-100"
                                     data-bs-toggle="modal"
                                     data-bs-target="#dynamicModal"
@@ -128,7 +157,10 @@
         </div>
 
 
+        <!-- ===== CATEGORY CAROUSEL SECTION ===== -->
+        <!-- position-relative: Context for absolute children | my-4: Margin vertical -->
         <div class="position-relative my-4">
+        <!-- position-absolute: Removed from flow | top-0/start-50/translate-middle: Position and center | panel: Panel styling | bg-dark: Dark background | text-white: White text | z-3: High z-index -->
         <div class="position-absolute top-0 start-50 translate-middle
                     panel px-4 py-2 bg-dark text-white z-3">
             Category
@@ -148,21 +180,33 @@
             <!-- Slides -->
             <div class="carousel-inner">
 
-                <!-- SLIDE 1 -->
+                <!-- carousel-item: Carousel slide | active: Show on load -->
                 <div class="carousel-item active">
+                    <!-- container: Center content | mt-5: Top margin -->
                     <div class="container mt-5">
+                        <!-- row: Grid row | gy-4: Vertical gap between items | justify-content-around: Space items -->
                         <div class="row gy-4 justify-content-around">
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns (full/half/half) -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card container (gradient panel) | panel: Styled panel with border/shadow | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid row | align-items-center: Vertically center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full width mobile, 58% on large | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Simple Sword</h2>
+                                        <!-- gold-frame: Custom gold border frame (from CSS) -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/simplesword-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full width mobile, 42% on large -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6/fs-md-5: Responsive font sizes | mt-3: Top margin -->
                                         <p class="fs-6 fs-md-5 mt-3">5000G</p>
+                                        <!-- btn: Button styling | btn-primary: Blue primary color | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -181,17 +225,27 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns (full/half/half) -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card container | panel: Styled panel | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid row | align-items-center: Vertically center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full/58% responsive | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Steel Greatsword</h2>
+                                        <!-- gold-frame: Custom gold border frame -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/steelgreatsword-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full/42% responsive -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6/fs-md-5: Responsive font sizes | mt-3: Top margin -->
                                         <p class="fs-6 mt-3">10000G</p>
+                                        <!-- btn: Button | btn-primary: Blue primary | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -213,21 +267,33 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 2 -->
+                <!-- carousel-item: Carousel slide (inactive) -->
                 <div class="carousel-item">
+                    <!-- container: Center content | mt-5: Top margin -->
                     <div class="container mt-5">
+                        <!-- row: Grid row | gy-4: Vertical gap | justify-content-around: Space items -->
                         <div class="row gy-4 justify-content-around">
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card | panel: Styled panel | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid | align-items-center: Vertical center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full/58% responsive | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Gold Axe</h2>
+                                        <!-- gold-frame: Custom gold border frame -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/goldaxe-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full/42% responsive -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6/fs-md-5: Responsive font sizes | mt-3: Top margin -->
                                         <p class="fs-6 fs-md-5 mt-3">30000G</p>
+                                        <!-- btn: Button | btn-primary: Blue primary | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -246,17 +312,27 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card | panel: Styled panel | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid | align-items-center: Vertical center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full/58% responsive | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Gold Sickle</h2>
+                                        <!-- gold-frame: Custom gold border frame -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/goldsickel-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full/42% responsive -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6: Font size | mt-3: Top margin -->
                                         <p class="fs-6 mt-3">20000G</p>
+                                        <!-- btn: Button | btn-primary: Blue primary | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -278,21 +354,33 @@
                     </div>
                 </div>
 
-                <!-- SLIDE 3 -->
+                <!-- carousel-item: Carousel slide (inactive) -->
                 <div class="carousel-item">
+                <!-- container: Center content | mt-5: Top margin -->
                 <div class="container mt-5">
+                        <!-- row: Grid row | gy-4: Vertical gap | justify-content-around: Space items -->
                         <div class="row gy-4 justify-content-around">
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card | panel: Styled panel | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid | align-items-center: Vertical center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full/58% responsive | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Crystal Staff</h2>
+                                        <!-- gold-frame: Custom gold border frame -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/crystalstaff-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full/42% responsive -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6/fs-md-5: Responsive font sizes | mt-3: Top margin -->
                                         <p class="fs-6 fs-md-5 mt-3">50000G</p>
+                                        <!-- btn: Button | btn-primary: Blue primary | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -311,17 +399,27 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-6"> <!-- card wider on large screens -->
+                            <!-- col-12/col-sm-6/col-lg-6: Responsive columns -->
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <!-- item-card: Custom card | panel: Styled panel | p-3: Padding -->
                                 <div class="item-card panel p-3">
+                                    <!-- row: Grid | align-items-center: Vertical center -->
                                     <div class="row align-items-center">
+                                    <!-- col-12/col-lg-7: Full/58% responsive | text-center: Center text -->
                                     <div class="col-12 col-lg-7 text-center">
+                                        <!-- fs-4/fs-md-3: Responsive font sizes -->
                                         <h2 class="fs-4 fs-md-3">Basic Wand</h2>
+                                        <!-- gold-frame: Custom gold border frame -->
                                         <div class="gold-frame">
+                                        <!-- img-fluid: Responsive image -->
                                         <img src="../pictures/basicwand-removebg-preview.png" class="img-fluid">
                                         </div>
                                     </div>
+                                    <!-- col-12/col-lg-5: Full/42% responsive -->
                                     <div class="col-12 col-lg-5">
+                                        <!-- fs-6: Font size | mt-3: Top margin -->
                                         <p class="fs-6 mt-3">15000G</p>
+                                        <!-- btn: Button | btn-primary: Blue primary | w-100: Full width -->
                                         <button class="btn btn-primary w-100"
                                             data-bs-toggle="modal"
                                             data-bs-target="#dynamicModal"
@@ -345,37 +443,57 @@
 
             </div>
             
-            <!-- Controls -->
+            <!-- carousel-control-prev: Previous slide button -->
             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <!-- carousel-control-prev-icon: Left arrow icon | bg-gold: Gold background | rounded-circle: Circular | p-3: Padding -->
                 <span class="carousel-control-prev-icon bg-gold rounded-circle p-3" aria-hidden="true"></span>
+                <!-- visually-hidden: Screen reader only text -->
                 <span class="visually-hidden">Previous</span>
             </button>
+            <!-- carousel-control-next: Next slide button -->
             <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <!-- carousel-control-next-icon: Right arrow icon | bg-gold: Gold background | rounded-circle: Circular | p-3: Padding -->
                 <span class="carousel-control-next-icon bg-gold rounded-circle p-3" aria-hidden="true"></span>
+                <!-- visually-hidden: Screen reader only text -->
                 <span class="visually-hidden">Next</span>
             </button>
             </div>
         </div>
     </main>
+    
+    <!-- Footer section -->
+    <!-- container: Center content | pb-4: Bottom padding -->
     <footer class="container pb-4">
-        
-
+        <!-- Empty footer for future content -->
     </footer>
 
+    <!-- ===== PURCHASE CONFIRMATION MODAL ===== -->
+    <!-- modal: Modal dialog | fade: Fade animation -->
     <div class="modal fade" id="dynamicModal" tabindex="-1" aria-hidden="true">
+    <!-- modal-dialog: Modal sizing | modal-dialog-centered: Center modal -->
     <div class="modal-dialog modal-dialog-centered">
+        <!-- modal-content: Main modal container -->
         <div class="modal-content">
 
+        <!-- modal-header: Header section | panel: Custom styling | p-4: Padding -->
         <div class="modal-header panel p-4">
+            <!-- modal-title: Title styling -->
             <h5 class="modal-title" id="modalTitle">Title Here</h5>
+            <!-- btn-close: Bootstrap close button -->
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
+        <!-- modal-body: Body section | text-center: Center text | panel: Custom styling | p-4: Padding -->
         <div class="modal-body text-center panel p-4">
+            <!-- Dynamic text content -->
             <p id="modalText">Some text here</p>
+            <!-- img-fluid: Responsive image | mb-3: Bottom margin -->
             <img src="" id="modalImage" class="img-fluid mb-3" alt="Modal Image">
+            <!-- d-flex: Flexbox | justify-content-center: Center items | gap-2: Space between buttons -->
             <div class="d-flex justify-content-center gap-2">
+            <!-- Claim button: Purchase confirmation -->
             <button id="claimBtn" class="btn btn-info">Claim</button>
+            <!-- Close button: Hidden by default, shown after claiming -->
             <button id="closeBtn" class="btn btn-secondary" data-bs-dismiss="modal" style="display:none;">Close</button>
             </div>
         </div>
@@ -386,7 +504,10 @@
 
 
 
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Bootstrap JavaScript: Powers carousel, modals, and interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Market functionality: Handles item purchases, modal interactions, and dynamic content -->
     <script src="../Javascript/Market_DailyShop.js"></script>
 </body>
 </html>

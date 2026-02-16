@@ -42,55 +42,67 @@
     </div>
   </nav>
     <main>
+        <!-- Header section with contact title -->
         <header class="text-center mb-5">
-            <div class="text-center">
-                <hr class="divider">
-                <h2 class="align-items-center">Contact us!</h2>
-                <hr class="divider">
-            </div>
-        </div>
+            <hr class="divider">
+            <h2>Contact us!</h2>
+            <hr class="divider">
         </header>
-        <div class="p-4 panel">
-            <div>
+        <!-- Contact information section with email, phone, and address -->
+        <div class="p-4 panel text-center">
+            <div class="mb-4">
                 <img src="../img/email.png" alt="email" width="100" height="100">
-                <p>Dreamstudios.gmail.com</p>
+                <p class="mt-3">Dreamstudios.gmail.com</p>
             </div>
             <hr class="divider mx-auto">
-            <div>
-                <img src="../img/send.png" alt="phonenumber" width="100" height="100">
-                <p>65123456</p>
+            <div class="my-4">
+                <img src="../img/send.png" alt="phone" width="100" height="100">
+                <p class="mt-3">65123456</p>
             </div>
             <hr class="divider mx-auto">
-            <div>
+            <div class="mt-4">
                 <img src="../img/phone.png" alt="location" width="100" height="100">
-                <p>BLK123A street 1</p>
+                <p class="mt-3">BLK123A street 1</p>
             </div>
         </div>
-        <div class="text-center">
+        <!-- Contact form section header -->
+        <div class="text-center mt-5 mb-4">
             <hr class="divider">
-            <h2 class="align-items-center">Send a Message!</h2>
+            <h2>Send a Message!</h2>
             <hr class="divider">
         </div>
+        
+        <!-- Contact form with email, subject, and message fields -->
         <div class="p-4 panel">
-            <div class="p-4 panel">
-                <label for="email">Email</label>
-                <input type="email" id="email1" name="_replyto" placeholder="your.email@example.com" required>
-            </div>
-            <div class="p-4 panel">
-                <label for="Subject">Subject</label>
-                <input type="Subject" id="Subject" name="_replyto" placeholder="Subject" required>
-            </div>
-            <div class="p-4 panel">
-                <label for="Message">Message</label>
-                <input type="Message" id="Messages" name="_replyto" placeholder="Type" required>
-            </div>
+            <form id="contactForm">
+                <!-- Email input field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                </div>
+                
+                <!-- Subject input field -->
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                
+                <!-- Message textarea field -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Type your message here..." rows="5" required></textarea>
+                </div>
+            </form>
         </div>
         
     </main>
+    <!-- Footer with submit button connected to the contact form -->
     <footer class="p-4 panel text-center">
-        <button class="btn btn-primary w-100" type="submit">send</button>
+        <button class="btn btn-primary w-100" type="submit" form="contactForm">Send Message</button>
     </footer>
+    <!-- Bootstrap JavaScript for interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../Javascript/Home.js"></script>
+    <!-- Contact form handler script -->
+    <script src="../Javascript/Contact.js"></script>
 </body>
 </html>
