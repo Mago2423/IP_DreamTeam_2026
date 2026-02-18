@@ -600,7 +600,7 @@ footer{
 }
 
 .team-logo {
-  max-height: 55px;
+  max-height: 300px;
 }
 
 /* Button */
@@ -616,4 +616,18 @@ footer{
 .get-started-btn:hover {
   background-color: #3a2c4a;
   color: #ffffff;
+}
+
+.dreamteamlogo{
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(50,40,70,0.9), rgba(40,30,60,0.9));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
 }
