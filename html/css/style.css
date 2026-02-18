@@ -561,3 +561,59 @@ footer{
   /* Details column (5 units wide on large screens) - item name, price, buttons */
   justify-content: space-between;       /* Space content to top and bottom */
 }
+
+/* Background */
+.welcome-page {
+  background-color: #46325f;
+}
+
+/* Card container */
+.welcome-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Title */
+.forge-title {
+  color: #f3e1b0;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  margin-bottom: 2rem;
+}
+
+/* Logo */
+.forge-logo {
+  max-width: 260px;
+  margin-bottom: 2.5rem;
+}
+
+/* Made by section */
+.made-by {
+  margin-top: auto;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #f3e1b0;
+  font-size: 1rem;
+}
+
+.team-logo {
+  max-height: 55px;
+}
+
+/* Button */
+.get-started-btn {
+  width: 100%;
+  background-color: #2f243a;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.get-started-btn:hover {
+  background-color: #3a2c4a;
+  color: #ffffff;
+}

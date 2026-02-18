@@ -107,13 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // ===== Redirect to Appropriate Auction Page =====
       // Navigate back to the correct auction page based on which table was used
-      if (TABLE_NAME=="bid") {
+      if (TABLE_NAME=="bids") {
         window.location.href = "../Auction/Auction.html";
       }
-      else if (TABLE_NAME=="bid2") {
+      else if (TABLE_NAME=="bids2") {
         window.location.href = "../Auction/Auction2.html";
       }
-      else {TABLE_NAME=="bid3"
+      else {TABLE_NAME=="bids3"
         window.location.href = "../Auction/Auction3.html";
       }
       

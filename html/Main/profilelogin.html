@@ -2,49 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Your Profile</title>
+  <title>Profile Setup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-dark text-light">
+<body>
+    <header class="text-center mb-5">
+        <hr class="divider">
+        <h2 class="text-uppercase">Registration</h2>
+        <hr class="divider">
+    </header>
 
-  <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
 
-    <!-- Logo Area -->
-    <div class="mb-5 text-center">
-      <div class="border border-secondary rounded-circle d-flex align-items-center justify-content-center"
-           style="width: 180px; height: 180px;">
-        <span class="fs-4 text-muted">LOGO</span>
-      </div>
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="panel p-4 w-100" style="max-width: 500px;">
+
+        <form id="profileForm">
+            <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" required>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <a href="../../index.html" class="btn btn-success px-5">
+                Log In
+            </a>
+            <p>Already have an account? Log In</a></p>
+        </form>
+
+        </div>
     </div>
-
-    <!-- Profile Info -->
-    <div class="card bg-black text-light p-4 w-100 mb-4" style="max-width: 500px;">
-      <h3 class="text-center mb-3">Profile</h3>
-
-      <p><strong>Username:</strong> <span id="displayUsername"></span></p>
-      <p><strong>Email:</strong> <span id="displayEmail"></span></p>
-      <p><strong>Bio:</strong> <span id="displayBio"></span></p>
-    </div>
-
-    <!-- Login Button -->
-    <a href="index.html" class="btn btn-success px-5">
-      Log In
-    </a>
-
-  </div>
-
-  <script>
-    document.getElementById("displayUsername").textContent =
-      localStorage.getItem("username") || "—";
-
-    document.getElementById("displayEmail").textContent =
-      localStorage.getItem("email") || "—";
-
-    document.getElementById("displayBio").textContent =
-      localStorage.getItem("bio") || "—";
-  </script>
-
 </body>
 </html>
